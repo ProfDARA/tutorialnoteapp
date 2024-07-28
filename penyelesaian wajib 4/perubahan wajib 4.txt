@@ -1,0 +1,30 @@
+perubahan pada script.js untuk Membangun Komponen UI dengan Web Component
+
+class NoteItem extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
+      <div class="note">
+        <h2>${this.getAttribute('title')}</h2>
+        <p>${this.getAttribute('body')}</p>
+        <small>${new Date(this.getAttribute('createdAt')).toLocaleString()}</small>
+      </div>
+    `;
+  }
+}
+
+customElements.define('note-item', NoteItem);
+
+const displayNotes = () => {
+  notesList.innerHTML = '';
+  notesData.forEach(note => {
+    const noteElement = document.createElement('note-item');
+    noteElement.setAttribute('title', note.title);
+    noteElement.setAttribute('body', note.body);
+    noteElement.setAttribute('createdAt', note.createdAt);
+    notesList.appendChild(noteElement);
+  });
+};

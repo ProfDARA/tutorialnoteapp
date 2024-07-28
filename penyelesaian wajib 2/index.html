@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+    <!-- ada tambahan html wajib 2 dimana untuk menambahkan formulir, diletakan dibawah judul  -->
+    <!-- pada js dan css ada tambahan untuk menambah fungsi form tambah catatan                -->
+<body>
+
+    <div id="app">
+    <h1>Notes App</h1>
+
+    <!-- ini ada tambahan untuk wajib 2 dimana diminta untuk menambahkan formulir    -->
+    <!-- formulir (elemen<form>) ini akan berfungsi untuk menambahkan note baru      -->
+    <!-- formulir ini terdiri dari 2 input, yaitu input text dan textarea            -->
+    <!-- input text digunakan untuk menambahkan judul note , sedangkan area untuk isi-->
+    <form id="note-form">
+      <!-- input type merupakan jenis inputnya, id merupakan nama elemen, placeholder-->
+      <!-- merupakan teks yang akan muncul pada input tersebut, required merupakan   -->
+      <!-- atribut yang digunakan untuk menandakan bahwa input tersebut wajib diisi   -->
+      <input type="text" id="title" placeholder="Judul Note" required>
+      <textarea id="body" placeholder="Isi Note" required></textarea>
+
+      <!-- button ini digunakan untuk menambahkan note baru, ketika diklik akan memanggil-->
+      <!-- fungsi addNote() pada script.js -->
+      <button type="submit">Tambah Note</button>
+    </form>
+
+    <!-- ini adalah bagian isi note  -->
+    <div id="notes-list"></div>
+  </div>
+
+  <script src="notes.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

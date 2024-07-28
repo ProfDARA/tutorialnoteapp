@@ -1,0 +1,25 @@
+perubahan pada script.js untuk Menerapkan Custom Attribute pada Custom Element
+
+class NoteItem extends HTMLElement {
+  static get observedAttributes() {
+    return ['title', 'body', 'createdAt'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
+      <div class="note">
+        <h2>${this.getAttribute('title')}</h2>
+        <p>${this.getAttribute('body')}</p>
+        <small>${new Date(this.getAttribute('createdAt')).toLocaleString()}</small>
+      </div>
+    `;
+  }
+}

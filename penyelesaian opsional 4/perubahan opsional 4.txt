@@ -1,0 +1,8 @@
+perubahan pada style.css untuk menerapkan responsive perangkat mobile
+
+/* style.css */
+@media (max-width: 600px) {
+  #notes-list {
+    grid-template-columns: 1fr;
+  }
+}

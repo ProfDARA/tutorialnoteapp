@@ -1,0 +1,15 @@
+tambah teknik grid pada style.css 
+
+#notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.note {
+  background: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}

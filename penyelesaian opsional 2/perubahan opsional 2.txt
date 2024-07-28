@@ -1,0 +1,17 @@
+perubahan pada script.js untuk Menerapkan Realtime Validation pada Formulir
+
+titleInput.addEventListener('input', () => {
+  if (titleInput.value.trim() === '') {
+    titleInput.setCustomValidity('Title is required.');
+  } else {
+    titleInput.setCustomValidity('');
+  }
+});
+
+bodyInput.addEventListener('input', () => {
+  if (bodyInput.value.trim() === '') {
+    bodyInput.setCustomValidity('Body is required.');
+  } else {
+    bodyInput.setCustomValidity('');
+  }
+});
